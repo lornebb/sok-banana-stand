@@ -1,5 +1,7 @@
 import React from "react"
 import { SoMeButton } from "./components/SoMeButton"
+import { SvgBandcamp } from "./icons/svg-bandcamp"
+import { SvgSpotify } from "./icons/svg-spotify"
 
 export const App = () => {
   return (
@@ -11,15 +13,15 @@ export const App = () => {
         <SoMeButton
           href="https://sonofkong.bandcamp.com/"
           title="BandCamp"
-        />
+        >
+          <SvgBandcamp/>
+        </SoMeButton>
         <SoMeButton
           href="https://open.spotify.com/artist/14tfZFUIaavTfIOyqBP9Mp"
           title="Spotify"
-        />
-        <SoMeButton
-          href="https://www.youtube.com/channel/UCY5pevqMn98aQClj2TBWkoQ"
-          title="YouTube"
-        />
+        >
+          <SvgSpotify/>
+        </SoMeButton>
       </div>
     </main>
   )
