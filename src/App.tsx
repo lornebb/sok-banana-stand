@@ -2,6 +2,7 @@ import React from "react"
 import { SoMeButton } from "./components/SoMeButton"
 import { SvgBandcamp } from "./icons/svg-bandcamp"
 import { SvgSpotify } from "./icons/svg-spotify"
+import { SvgYoutube } from "./icons/svg-youtube"
 
 export const App = () => {
   return (
@@ -21,6 +22,12 @@ export const App = () => {
           title="Spotify"
         >
           <SvgSpotify/>
+        </SoMeButton>
+        <SoMeButton
+          href="https://www.youtube.com/channel/UCY5pevqMn98aQClj2TBWkoQ"
+          title="Youtube"
+        >
+          <SvgYoutube/>
         </SoMeButton>
       </div>
     </main>
