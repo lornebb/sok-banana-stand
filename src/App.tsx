@@ -3,6 +3,7 @@ import { SoMeButton } from "./components/SoMeButton"
 import { SvgBandcamp } from "./icons/svg-bandcamp"
 import { SvgSpotify } from "./icons/svg-spotify"
 import { SvgYoutube } from "./icons/svg-youtube"
+import { SvgAppleMusic } from "./icons/svg-appleMusic"
 
 export const App = () => {
   return (
@@ -28,6 +29,12 @@ export const App = () => {
           title="Youtube"
         >
           <SvgYoutube/>
+        </SoMeButton>
+        <SoMeButton
+          href="https://music.apple.com/artist/son-of-kong/1049109342"
+          title="Apple Music"
+        >
+          <SvgAppleMusic/>
         </SoMeButton>
       </div>
     </main>
