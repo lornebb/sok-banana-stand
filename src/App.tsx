@@ -4,6 +4,7 @@ import { SvgBandcamp } from "./icons/svg-bandcamp"
 import { SvgSpotify } from "./icons/svg-spotify"
 import { SvgYoutube } from "./icons/svg-youtube"
 import { SvgAppleMusic } from "./icons/svg-appleMusic"
+import { SvgInstagram } from "./icons/svg-instagram"
 
 export const App = () => {
   return (
@@ -35,6 +36,12 @@ export const App = () => {
           title="Apple Music"
         >
           <SvgAppleMusic/>
+        </SoMeButton>
+        <SoMeButton
+          href="https://instagram.com/sonofkong_?igshid=YmMyMTA2M2Y="
+          title="Instagram"
+        >
+          <SvgInstagram/>
         </SoMeButton>
       </div>
     </main>
