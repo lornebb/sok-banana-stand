@@ -35,7 +35,8 @@ export const App = () => {
           href="https://music.apple.com/artist/son-of-kong/1049109342"
           title="Apple Music"
         >
-          <SvgAppleMusic/>
+          <SvgAppleMusic
+          />
         </SoMeButton>
         <SoMeButton
           href="https://instagram.com/sonofkong_?igshid=YmMyMTA2M2Y="
