@@ -5,6 +5,7 @@ import { SvgSpotify } from "./icons/svg-spotify"
 import { SvgYoutube } from "./icons/svg-youtube"
 import { SvgAppleMusic } from "./icons/svg-appleMusic"
 import { SvgInstagram } from "./icons/svg-instagram"
+import { YearRelease } from "./components/YearRelease"
 
 export const App = () => {
   return (
@@ -12,6 +13,7 @@ export const App = () => {
       <h1 className="font-sans font-bold text-yellow-500 text-9xl text-center">
         sok
       </h1>
+        <YearRelease year={2017} tracks={[<SvgBandcamp/>, <SvgSpotify/>, <SvgYoutube/>, <SvgAppleMusic/>]} />
       <div className="flex gap-3 mt-4">
         <SoMeButton
           href="https://sonofkong.bandcamp.com/"
