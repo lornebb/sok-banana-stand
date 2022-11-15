@@ -13,8 +13,6 @@ export const App = () => {
       <h1 className="font-sans font-bold text-yellow-500 text-9xl text-center">
         sok
       </h1>
-        <YearRelease year={2017} tracks={[<SvgBandcamp/>, <SvgSpotify/>, <SvgYoutube/>, <SvgAppleMusic/>]} />
-
       <div className="flex gap-3 mt-4 grid grid-flow-col grid-rows-6 md:grid-rows-1 lg:grid-rows-1">
         <SoMeButton
           href="https://sonofkong.bandcamp.com/"
