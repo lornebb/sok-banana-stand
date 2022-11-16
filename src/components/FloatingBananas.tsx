@@ -4,7 +4,17 @@ import { Suspense, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { EffectComposer, DepthOfField } from '@react-three/postprocessing'
 
-export function Banana({ z }) {
+type IBanana = {
+  z: number,
+  key: number,
+}
+
+type IFloatingBananas = {
+  count: number,
+  depth: number,
+}
+
+export function Banana({ z }:IBanana ) {
   const ref = useRef()
 
   const { nodes, materials } = useGLTF('/banana-v1-transformed.glb')
@@ -38,7 +48,7 @@ export function Banana({ z }) {
   )
 }
 
-function FloatingBananas({ count, depth = 80 }) {
+function FloatingBananas({ count, depth = 80 }: IFloatingBananas) {
   return (
     <Canvas gl={{ alpha: false }} camera={{ near: 0.01, far: 110, fov: 30 }}>
       <color attach='background' args={['#ffe085']}/>
