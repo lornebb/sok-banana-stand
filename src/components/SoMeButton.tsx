@@ -7,11 +7,26 @@ interface ISoMeButton {
 }
 
 export interface ISoMeList {
-  bandcamp: {},
-  spotify: {},
-  appleMusic: {},
-  youtube: {},
-  instagram: {},
+  bandcamp: {
+    title: string,
+    href: string
+  },
+  spotify: {
+    title: string,
+    href: string
+  },
+  appleMusic: {
+    title: string,
+    href: string
+  },
+  youtube: {
+    title: string,
+    href: string
+  },
+  instagram: {
+    title: string,
+    href: string
+  },
 }
 
 export const SoMeList:ISoMeList = {

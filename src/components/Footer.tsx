@@ -46,7 +46,7 @@ export const Footer = () => {
           <SvgInstagram/>
         </SoMeButton>
       </div>
-      <div className="text-gray-700 text-center p-4 italic">
+      <div className="text-gray-400 text-center p-4 italic">
         <p>
           ©{yearToday} <a className="" href="/">SoK</a>
         </p>
