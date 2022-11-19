@@ -1,10 +1,4 @@
 import React from "react"
-import { SoMeButton, SoMeList, ISoMeList } from "./components/SoMeButton"
-import { SvgBandcamp } from "./icons/svg-bandcamp"
-import { SvgSpotify } from "./icons/svg-spotify"
-import { SvgYoutube } from "./icons/svg-youtube"
-import { SvgAppleMusic } from "./icons/svg-appleMusic"
-import { SvgInstagram } from "./icons/svg-instagram"
 import { Footer } from "./components/Footer"
 
 export const App = () => {

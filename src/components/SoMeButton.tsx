@@ -27,6 +27,10 @@ export interface ISoMeList {
     title: string,
     href: string
   },
+  tidal: {
+    title: string,
+    href: string
+  },
 }
 
 export const SoMeList:ISoMeList = {
@@ -35,6 +39,7 @@ export const SoMeList:ISoMeList = {
   appleMusic: { title: "AppleMusic", href: "https://music.apple.com/artist/son-of-kong/1049109342" },
   youtube: { title: "Youtube", href: "https://www.youtube.com/channel/UCY5pevqMn98aQClj2TBWkoQ" },
   instagram: { title: "Instagram", href: "https://instagram.com/sonofkong_?igshid=YmMyMTA2M2Y=" },
+  tidal: { title: "Tidal", href: "https://tidal.com/browse/artist/8412421" },
 }
 
 export const SoMeButton = ({href, title, children}: ISoMeButton) => {
@@ -44,7 +49,22 @@ export const SoMeButton = ({href, title, children}: ISoMeButton) => {
       target="_blank"
       rel="noopener noreferrer"
       type="button"
-      className="text-yellow-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50"
+      className="
+        text-yellow-900
+        bg-[#F7BE38]
+        hover:bg-[#F7BE38]/90
+        dark:focus:ring-[#F7BE38]/50
+        focus:ring-[#F7BE38]/50
+        focus:ring-4
+        focus:outline-none
+        font-medium rounded-lg
+        text-sm
+        px-5
+        py-2.5
+        text-center
+        inline-flex
+        items-center
+        "
     >
     {children}
     <p>
