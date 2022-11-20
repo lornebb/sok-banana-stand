@@ -1,7 +1,6 @@
 import React from 'react'
 import FloatingBananas from './components/FloatingBananas'
 import { SoMeButton } from './components/SoMeButton'
-import { YearRelease } from './components/YearRelease'
 import { SvgAppleMusic } from './icons/svg-appleMusic'
 import { SvgBandcamp } from './icons/svg-bandcamp'
 import { SvgInstagram } from './icons/svg-instagram'
@@ -44,7 +43,7 @@ export const App = () => {
         </SoMeButton>
       </div>
       <div className="absolute w-full h-full top-0 -z-10">
-        <FloatingBananas count={100} />
+        <FloatingBananas count={100}/>
       </div>
     </main>
   )

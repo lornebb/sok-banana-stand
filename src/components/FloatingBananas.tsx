@@ -11,7 +11,7 @@ type IBanana = {
 
 type IFloatingBananas = {
   count: number,
-  depth: number,
+  depth?: number,
 }
 
 export function Banana({ z }:IBanana ) {
