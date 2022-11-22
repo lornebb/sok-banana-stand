@@ -11,7 +11,7 @@ export const App = () => {
       </main>
       <Footer />
       <div className="absolute w-full h-full top-0 -z-10">
-          <FloatingBananas count={100}/>
+        <FloatingBananas count={100}/>
       </div>
     </>
   )
