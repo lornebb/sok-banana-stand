@@ -28,7 +28,7 @@ const SoMeButtonMap = SoMeList.map((e, index) => {
 export const Footer = () => {
 
   return (
-    <footer className="grid bg-gradient-to-b from-background-yellow text-center place-content-center">
+    <footer className="grid place-content-center absolute bottom-0 left-1/2 -translate-x-1/2">
       <div className=" 
         pt-3
         gap-3
