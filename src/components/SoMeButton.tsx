@@ -61,11 +61,12 @@ export const SoMeButton = ({href, title, icon}: ISoMeButton) => {
           text-center
           inline-flex
           items-center
+          gap-2
           "
       >
         <>
           {icon}
-          <p>
+          <p className="hidden md:inline-block">
             {title}
           </p>
         </>
