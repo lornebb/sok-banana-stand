@@ -13,13 +13,13 @@ const yearToday = date.getFullYear();
 export const Footer = () => {
   return (
     <footer className="grid bg-yellow-200 text-center place-content-center">
-      <hr className="bg-[#1da1f2]"/>
       <div className=" 
         pt-3
         gap-3
         grid
         grid-flow-col
         grid-rows-6
+        sm:grid-rows-2
         md:grid-rows-1
         md:grid-cols-2
         "
@@ -61,7 +61,7 @@ export const Footer = () => {
           <SvgTidal/>
         </SoMeButton>
       </div>
-      <div className="text-gray-400 text-center p-4 italic">
+      <div className="text-yellow-900 text-center p-4 italic">
         <p>
           ©{yearToday} <a className="" href="/">SoK</a>
         </p>

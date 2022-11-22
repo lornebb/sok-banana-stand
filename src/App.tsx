@@ -9,6 +9,7 @@ export const App = () => {
         sok
       </h1>
     </main>
+    <hr className="bg-[#1da1f2]"/>
     <Footer />
     </>
   )
