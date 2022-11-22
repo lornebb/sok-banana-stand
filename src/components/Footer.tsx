@@ -12,7 +12,7 @@ const yearToday = date.getFullYear();
 
 export const Footer = () => {
   return (
-    <footer className="grid bg-yellow-200 text-center place-content-center">
+    <footer className="grid bg-gradient-to-b from-background-yellow text-center place-content-center">
       <div className=" 
         pt-3
         gap-3
@@ -37,10 +37,10 @@ export const Footer = () => {
           <SvgSpotify/>
         </SoMeButton>
         <SoMeButton
-          title={SoMeList.youtube.title}
-          href={SoMeList.youtube.href}
+          title={SoMeList.tidal.title}
+          href={SoMeList.tidal.href}
         >
-          <SvgYoutube/>
+          <SvgTidal/>
         </SoMeButton>
         <SoMeButton
           title={SoMeList.appleMusic.title}
@@ -49,16 +49,16 @@ export const Footer = () => {
           <SvgAppleMusic/>
         </SoMeButton>
         <SoMeButton
+          title={SoMeList.youtube.title}
+          href={SoMeList.youtube.href}
+        >
+          <SvgYoutube/>
+        </SoMeButton>
+        <SoMeButton
           title={SoMeList.instagram.title}
           href={SoMeList.instagram.href}
         >
           <SvgInstagram/>
-        </SoMeButton>
-        <SoMeButton
-          title={SoMeList.tidal.title}
-          href={SoMeList.tidal.href}
-        >
-          <SvgTidal/>
         </SoMeButton>
       </div>
       <div className="text-yellow-900 text-center p-4 italic">

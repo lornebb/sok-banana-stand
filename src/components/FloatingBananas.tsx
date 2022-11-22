@@ -48,7 +48,7 @@ export function Banana({ z }:IBanana ) {
   )
 }
 
-function FloatingBananas({ count, depth = 80 }: IFloatingBananas) {
+export function FloatingBananas({ count, depth = 80 }: IFloatingBananas) {
   return (
     <Canvas gl={{ alpha: false }} camera={{ near: 0.01, far: 110, fov: 30 }}>
       <color attach='background' args={['#ffe085']}/>
@@ -65,5 +65,3 @@ function FloatingBananas({ count, depth = 80 }: IFloatingBananas) {
     </Canvas>
   )
 }
-
-export default FloatingBananas
