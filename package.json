@@ -19,8 +19,13 @@
     "*.{js,jsx,ts,tsx}": "yarn run lint:fix"
   },
   "dependencies": {
+    "@react-three/drei": "^9.40.0",
+    "@react-three/fiber": "^8.9.1",
+    "@react-three/postprocessing": "^2.7.0",
+    "@types/three": "^0.146.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "three": "^0.146.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
