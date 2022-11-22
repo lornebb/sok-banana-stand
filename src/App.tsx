@@ -11,8 +11,8 @@ import { HeroImg } from "./components/HeroImg"
 export const App = () => {
   return (
     <>
+      <main className="grid place-content-center bg-transparent min-h-screen">
       <HeroImg />
-      <main className="grid place-content-center bg-yellow-200 min-h-screen">
         <div className="flex gap-3 mt-4 grid grid-flow-col grid-rows-6 md:grid-rows-1 lg:grid-rows-1">
           <SoMeButton
             href="https://sonofkong.bandcamp.com/"
