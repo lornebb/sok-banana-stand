@@ -6,6 +6,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         'sokHero': "url('./media/img/SOKlarge.png')",
+      },
+      colors: {
+        'background-yellow': '#ffe085',
       }
     },
   plugins: [],
