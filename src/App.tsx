@@ -1,6 +1,6 @@
 import React from "react"
+import { FloatingBananas } from "./components/FloatingBananas"
 import { Footer } from "./components/Footer"
-import { FloatingBananas } from './components/FloatingBananas'
 import { HeroImg } from "./components/HeroImg"
 
 export const App = () => {
