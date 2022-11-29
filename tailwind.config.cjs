@@ -11,6 +11,6 @@ module.exports = {
         'background-yellow': '#ffe085',
       }
     },
-  plugins: [],
-}
+    plugins: [],
+  }
 }
