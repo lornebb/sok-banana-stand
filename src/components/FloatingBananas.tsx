@@ -3,6 +3,7 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Suspense, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { EffectComposer, DepthOfField } from '@react-three/postprocessing'
+import { Mesh } from 'three'
 
 type IBanana = {
   z: number,
@@ -15,7 +16,7 @@ type IFloatingBananas = {
 }
 
 export function Banana({ z }:IBanana ) {
-  const ref = useRef()
+  const ref = useRef<Mesh>(null!);
 
   const { nodes, materials } = useGLTF('/banana-v1-transformed.glb')
 
@@ -38,9 +39,11 @@ export function Banana({ z }:IBanana ) {
     }
   })
 
+  // Property 'geometry' does not exist on type 'Object3D<Event>'
   return (
     <mesh
       ref={ref}
+      // @ts-ignore
       geometry={nodes.banana_high.geometry}
       material={materials.skin}
       material-emissive="orange"
