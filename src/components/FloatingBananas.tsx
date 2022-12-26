@@ -1,22 +1,22 @@
 import { Environment, useGLTF } from '@react-three/drei'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import { DepthOfField, EffectComposer } from '@react-three/postprocessing'
 import { Suspense, useRef, useState } from 'react'
 import * as THREE from 'three'
-import { EffectComposer, DepthOfField } from '@react-three/postprocessing'
 import { Mesh } from 'three'
 
 type IBanana = {
-  z: number,
-  key: number,
+  z: number
+  key: number
 }
 
 type IFloatingBananas = {
-  count: number,
-  depth?: number,
+  count: number
+  depth?: number
 }
 
-export function Banana({ z }:IBanana ) {
-  const ref = useRef<Mesh>(null!);
+export function Banana({ z }: IBanana) {
+  const ref = useRef<Mesh>(null!)
 
   const { nodes, materials } = useGLTF('/banana-v1-transformed.glb')
 
@@ -32,7 +32,11 @@ export function Banana({ z }:IBanana ) {
   })
 
   useFrame((state) => {
-    ref.current.rotation.set((data.rX += 0.001), (data.rY += 0.001), (data.rZ += 0.001))
+    ref.current.rotation.set(
+      (data.rX += 0.001),
+      (data.rY += 0.001),
+      (data.rZ += 0.001)
+    )
     ref.current.position.set(data.x * width, (data.y += 0.03), z)
     if (data.y > height) {
       data.y = -height
@@ -53,18 +57,25 @@ export function Banana({ z }:IBanana ) {
 
 export function FloatingBananas({ count, depth = 80 }: IFloatingBananas) {
   return (
-    <Canvas gl={{ alpha: false }} camera={{ near: 0.01, far: 110, fov: 30 }}>
-      <color attach='background' args={['#ffe085']}/>
-      <spotLight position={[10, 10, 10]} intensity={1} />
-      <Suspense fallback={null}>
-        <Environment preset="sunset" />
-        {Array.from({ length: count }, (_, i) => (
-          <Banana key={i} z={-(i / count) * depth - 20} />
+    <>
+      <Canvas gl={{ alpha: false }} camera={{ near: 0.01, far: 110, fov: 30 }}>
+        <color attach="background" args={['#ffe085']} />
+        <spotLight position={[10, 10, 10]} intensity={1} />
+        <Suspense fallback={null}>
+          <Environment preset="sunset" />
+          {Array.from({ length: count }, (_, i) => (
+            <Banana key={i} z={-(i / count) * depth - 20} />
           ))}
-        <EffectComposer>
-          <DepthOfField target={[0,0,depth / 2]} focalLength={0.5} bokehScale={11} height={700}/>
-        </EffectComposer>
-      </Suspense>
-    </Canvas>
+          <EffectComposer>
+            <DepthOfField
+              target={[0, 0, depth / 2]}
+              focalLength={0.5}
+              bokehScale={11}
+              height={700}
+            />
+          </EffectComposer>
+        </Suspense>
+      </Canvas>
+    </>
   )
 }

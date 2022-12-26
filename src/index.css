@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes circle-out-center {
+  from {
+    clip-path: circle(125%);
+  }
+  to {
+    clip-path: circle(0%);
+  }
+}
+
+[transition-style="out:circle:center"] {
+  animation: 2s cubic-bezier(0.25, 1, 0.3, 1) circle-out-center both;
+}
