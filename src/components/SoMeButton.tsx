@@ -56,7 +56,7 @@ export const SoMeButton = ({href, title, icon}: ISoMeButton) => {
           focus:outline-none
           font-medium rounded-lg
           text-sm
-          px-5
+          px-3
           py-2.5
           text-center
           inline-flex
