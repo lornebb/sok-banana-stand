@@ -1,7 +1,7 @@
 import { FloatingBananas } from './components/FloatingBananas'
 import { Footer } from './components/Footer'
 import { HeroImg } from './components/HeroImg'
-import Wipe from './components/Wipe'
+import { Wipe } from './components/Wipe'
 
 export const App = () => {
   return (
