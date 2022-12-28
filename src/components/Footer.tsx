@@ -51,7 +51,7 @@ const SoMeButtonMap = SoMeList.map((e, index) => {
 
 export const Footer = () => {
   return (
-    <footer className="grid place-content-center absolute bottom-0 left-1/2 -translate-x-1/2 ">
+    <footer className="grid justify-center">
       <div
         className=" 
         flex flex-row space-x-3 

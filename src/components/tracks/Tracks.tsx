@@ -12,10 +12,10 @@ export const Tracks = () => {
   ]
 
   return (
-    <div className="w-11/12 my-0 mx-auto max-w-7xl overflow-hidden" >
-      <div className="flex gap-4 overflow-scroll py-6">
+    <div className=" my-0 mx-0 overflow-hidden" >
+      <div className="flex gap-4 overflow-scroll py-6 px-36">
         {tracks.map((track) => (
-          <Track size="300" trackId={track.id} />
+          <Track size={300} trackId={track.id} key={track.id}/>
         ))}
       </div>
     </div>
