@@ -1,6 +1,8 @@
+import { TrackData } from '../../App'
 import Track from './Track'
 
-export const Tracks = ({tracks}) => {
+
+export const Tracks = ({ tracks }: {tracks: TrackData[]}) => {
   // 170 to 700 range for the size
 
   return (
