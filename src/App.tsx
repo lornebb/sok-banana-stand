@@ -5,9 +5,14 @@ import { HeroImg } from './components/HeroImg'
 import { Tracks } from './components/tracks/Tracks'
 import { Wipe } from './components/Wipe'
 
+export type TrackData = {
+  title: string,
+  id: string
+}
+
 
 // put track data somewhere else?
-const tracks2021 = [
+const tracks2021: TrackData[] = [
   { title: 'Never Ever Land', id: '614336722' },
   { title: 'Get Up', id: '4132457639' },
   { title: 'Club Tropigwana', id: '743691718' },
@@ -15,7 +20,7 @@ const tracks2021 = [
   { title: 'Never Ever Land', id: '3974639248' },
 ]
 
-const tracks2022 = [
+const tracks2022: TrackData[] = [
   { title: 'Never Ever Land', id: '614336722' },
   { title: 'Get Up', id: '4132457639' },
   { title: 'Club Tropigwana', id: '743691718' },
