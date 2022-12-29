@@ -17,7 +17,7 @@ export const HeroImg = () => {
   return (
     <div className={`flex h-screen justify-center mx-auto items-center`}>
       <div
-        className={`fixed max-w-xl px-4 ${scrolled ? 'transition scale-50 -top-16 mt-6 sm:mt-0' : ''}`}
+        className={`fixed max-w-xl px-4 ${scrolled ? 'transition scale-50 -top-16 mt-6 sm:mt-0' : 'scale-100 transition'}`}
       >
         <img
           className="w-full"
