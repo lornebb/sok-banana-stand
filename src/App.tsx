@@ -5,40 +5,42 @@ import { HeroImg } from './components/HeroImg'
 import { Tracks } from './components/tracks/Tracks'
 import { Wipe } from './components/Wipe'
 
-import { useEffect, useState } from 'react'
+
+// put track data somewhere else?
+const tracks2021 = [
+  { title: 'Never Ever Land', id: '614336722' },
+  { title: 'Get Up', id: '4132457639' },
+  { title: 'Club Tropigwana', id: '743691718' },
+  { title: 'Remember Me', id: '3008176448' },
+  { title: 'Never Ever Land', id: '3974639248' },
+]
+
+const tracks2022 = [
+  { title: 'Never Ever Land', id: '614336722' },
+  { title: 'Get Up', id: '4132457639' },
+  { title: 'Club Tropigwana', id: '743691718' },
+  { title: 'Remember Me', id: '3008176448' },
+  { title: 'Never Ever Land', id: '3974639248' },
+]
 
 export const App = () => {
-  const [shrink, setShrink] = useState(false)
   const { progress } = useProgress()
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShrink(window.pageYOffset >= 200)
-    }
-    window.addEventListener('scroll', handleScroll)
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
 
   return (
     <>
-      <div className="grid place-content-center bg-transparent min-h-screen relative">
-        <div className={`flex justify-center sticky h-screen  ${shrink ? ' top-0 w-44 mx-auto items-start' : 'items-center'}`}>
-          <HeroImg />
-        </div>
+      <div className="flex flex-col bg-transparent min-h-screen relative">
+        <HeroImg />
         <Wipe />
+
+        {/* page content drops in only after 3d loading completes */}
         {progress === 100 && (
-          <>
-            <Tracks />
-            {/* <Tracks /> */}
+          <div className="flex flex-col space-y-10">
+            <Tracks tracks={tracks2022} />
+            <Tracks tracks={tracks2021} />
             <Footer />
-          </>
+          </div>
         )}
-        <div className="absolute w-full h-full top-0 -z-10">
-          <FloatingBananas count={100} />
-        </div>
+        <FloatingBananas count={100} />
       </div>
     </>
   )
