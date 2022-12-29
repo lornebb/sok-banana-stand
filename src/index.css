@@ -14,3 +14,17 @@
 [transition-style="out:circle:center"] {
   animation: 1.5s cubic-bezier(0.25, 1, 0.3, 1) circle-out-center both;
 }
+
+body {
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
