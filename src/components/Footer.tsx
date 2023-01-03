@@ -1,10 +1,4 @@
 import React from "react";
-import { SvgAppleMusic } from "../icons/svg-appleMusic";
-import { SvgBandcamp } from "../icons/svg-bandcamp";
-import { SvgInstagram } from "../icons/svg-instagram";
-import { SvgSpotify } from "../icons/svg-spotify";
-import { SvgTidal } from "../icons/svg-tidal";
-import { SvgYoutube } from "../icons/svg-youtube";
 import { SoMeButton } from "./SoMeButton";
 
 import {
