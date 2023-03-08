@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,7 +6,6 @@
 /* Google block look */
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); 
 /* fun style for years */
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 
 /* @layer base {
   html {
