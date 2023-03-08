@@ -62,6 +62,7 @@ export function FloatingBananas({ count, depth = 80 }: IFloatingBananas) {
         <color attach="background" args={['#ffe085']} />
         <spotLight position={[10, 10, 10]} intensity={1.8} />
         <Suspense fallback={null}>
+
           {Array.from({ length: count }, (_, i) => (
             <Banana key={i} z={-(i / count) * depth - 20} />
           ))}

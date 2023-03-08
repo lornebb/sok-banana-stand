@@ -18,6 +18,7 @@ export const HeroImg = () => {
         <img
           className='w-full'
           src='https://ik.imagekit.io/y6pjjzivw/SoK-Banana-Stand/SOK_Banana_Logo_v8-06.png'
+
           alt='son of kong logo'
         />
       </div>
