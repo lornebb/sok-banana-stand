@@ -57,12 +57,12 @@ export function Banana({ z }: IBanana) {
 
 export function FloatingBananas({ count, depth = 80 }: IFloatingBananas) {
   return (
-    <>
+    <div className="absolute w-full h-full top-0 -z-10">
       <Canvas gl={{ alpha: false }} camera={{ near: 0.01, far: 110, fov: 30 }}>
         <color attach="background" args={['#ffe085']} />
-        <spotLight position={[10, 10, 10]} intensity={1} />
+        <spotLight position={[10, 10, 10]} intensity={1.8} />
         <Suspense fallback={null}>
-          <Environment preset="sunset" />
+
           {Array.from({ length: count }, (_, i) => (
             <Banana key={i} z={-(i / count) * depth - 20} />
           ))}
@@ -76,6 +76,6 @@ export function FloatingBananas({ count, depth = 80 }: IFloatingBananas) {
           </EffectComposer>
         </Suspense>
       </Canvas>
-    </>
+    </div>
   )
 }

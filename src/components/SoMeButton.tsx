@@ -1,5 +1,3 @@
-import React from "react"
-import { SvgTypes } from "../icons/types";
 
 interface ISoMeButton {
   href: string,
@@ -7,36 +5,6 @@ interface ISoMeButton {
   icon: any,
 }
 
-// SvgTypes | JSX.Element | JSX.Element[],
-// children?: JSX.Element | JSX.Element[],
-// SVGElement
-
-// export interface ISoMeList {
-//   bandcamp: {
-//     title: string,
-//     href: string
-//   },
-//   spotify: {
-//     title: string,
-//     href: string
-//   },
-//   appleMusic: {
-//     title: string,
-//     href: string
-//   },
-//   youtube: {
-//     title: string,
-//     href: string
-//   },
-//   instagram: {
-//     title: string,
-//     href: string
-//   },
-//   tidal: {
-//     title: string,
-//     href: string
-//   },
-// }
 
 export const SoMeButton = ({href, title, icon}: ISoMeButton) => {
   return (
@@ -56,7 +24,7 @@ export const SoMeButton = ({href, title, icon}: ISoMeButton) => {
           focus:outline-none
           font-medium rounded-lg
           text-sm
-          px-5
+          px-3
           py-2.5
           text-center
           inline-flex
