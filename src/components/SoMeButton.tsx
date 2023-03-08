@@ -5,7 +5,6 @@ interface ISoMeButton {
   icon: any,
 }
 
-
 export const SoMeButton = ({href, title, icon}: ISoMeButton) => {
   return (
     <>
