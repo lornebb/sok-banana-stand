@@ -6,6 +6,11 @@ www.sonofkong.co
 
 We suggest using Node Version Manager (NVM is suggested) for node versions. As of Jan 2023, this project uses Node 18.12.1
 
+react icons: <https://www.npmjs.com/package/react-icons>
+
+Vite - <https://vitejs.dev/guide/>
+NVM - <https://www.linode.com/docs/guides/how-to-install-use-node-version-manager-nvm/>
+
 Once the repo is downloaded locally, make sure all packages are installed with `npm i`.
 
 Then to run the dev server (which uses Vite) use: `npm run dev`.
@@ -19,3 +24,4 @@ NVM - <https://www.linode.com/docs/guides/how-to-install-use-node-version-manage
 ### Colours
 
 The main yellow used in the floating bananas and, most importantly, the colour matched logo is #FFCC33
+

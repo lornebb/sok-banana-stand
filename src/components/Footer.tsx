@@ -1,19 +1,12 @@
-import React from "react";
-import { SvgAppleMusic } from "../icons/svg-appleMusic";
-import { SvgBandcamp } from "../icons/svg-bandcamp";
-import { SvgInstagram } from "../icons/svg-instagram";
-import { SvgSpotify } from "../icons/svg-spotify";
-import { SvgTidal } from "../icons/svg-tidal";
-import { SvgYoutube } from "../icons/svg-youtube";
 import { SoMeButton } from "./SoMeButton";
 
 import {
-  SiSpotify,
   SiApplemusic,
   SiBandcamp,
+  SiInstagram,
+  SiSpotify,
   SiTidal,
   SiYoutube,
-  SiInstagram,
 } from "react-icons/si";
 
 const date = new Date();
@@ -58,7 +51,7 @@ const SoMeButtonMap = SoMeList.map((e, index) => {
 
 export const Footer = () => {
   return (
-    <footer className='grid place-content-center absolute bottom-0 left-1/2 -translate-x-1/2'>
+    <footer className='grid justify-center'>
       <div
         className=' 
         flex flex-row space-x-3 
@@ -66,12 +59,11 @@ export const Footer = () => {
       >
         {SoMeButtonMap}
       </div>
-      <div className='text-yellow-900 text-center p-4'>
+      <div className='text-yellow-900 text-center p-4 italic'>
         <p>
-          <b>sonofkongcrew@gmail.com</b>
-          <br></br>©{yearToday}{" "}
+          ©{yearToday}{" "}
           <a className='' href='/'>
-            Son of Kong
+            SoK
           </a>
         </p>
       </div>
