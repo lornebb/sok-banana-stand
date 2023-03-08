@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Google block look */
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); 
+/* fun style for years */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+/* @layer base {
+  html {
+    font-family: Proxima Nova, system-ui, sans-serif;
+  }
+} */
+
 @keyframes circle-out-center {
   from {
     clip-path: circle(125%);
