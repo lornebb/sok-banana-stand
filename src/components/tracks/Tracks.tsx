@@ -1,4 +1,4 @@
-import { TrackData } from "../../App";
+import { TrackData } from "../../data/trackData";
 import Track from "./Track";
 
 export const Tracks = ({
