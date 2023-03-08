@@ -60,11 +60,12 @@ export const Footer = () => {
       >
         {SoMeButtonMap}
       </div>
-      <div className='text-yellow-900 text-center p-4 italic'>
+      <div className='text-yellow-900 text-center p-4'>
         <p>
-          ©{yearToday}{" "}
+          <b>sonofkongcrew@gmail.com</b>
+          <br></br>©{yearToday}{" "}
           <a className='' href='/'>
-            SoK
+            Son of Kong
           </a>
         </p>
       </div>
