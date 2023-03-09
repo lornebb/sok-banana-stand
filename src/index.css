@@ -1,3 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Google block look */
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); 
+/* fun style for years */
+
+/* @layer base {
+  html {
+    font-family: Proxima Nova, system-ui, sans-serif;
+  }
+} */
+
+@keyframes circle-out-center {
+  from {
+    clip-path: circle(125%);
+  }
+  to {
+    clip-path: circle(0%);
+  }
+}
+
+[transition-style="out:circle:center"] {
+  animation: 1.5s cubic-bezier(0.25, 1, 0.3, 1) circle-out-center both;
+}
+
+body {
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
