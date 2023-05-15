@@ -1,25 +1,20 @@
 import React, { Suspense } from "react";
 
-type Track = {
-  size: number;
-  trackId: string;
-};
-
 type Album = {
   size: number;
   albumId: string;
 };
 
-const LazyiFrameLoader = React.lazy(() => import("./IFrameTrack"));
+const LazyiFrameAlbumLoader = React.lazy(() => import("./IFrameAlbum"));
 
-const Track = ({ size, trackId }: Track) => {
+const Album = ({ size, albumId }: Album) => {
   return (
     <article className='bg-yellow-50 flex flex-col justify-between '>
       <Suspense fallback={<div>Loading...</div>}>
-        <LazyiFrameLoader size={size} trackId={trackId} />
+        <LazyiFrameAlbumLoader size={size} albumId={albumId} />
       </Suspense>
     </article>
   );
 };
 
-export default Track;
+export default Album;
