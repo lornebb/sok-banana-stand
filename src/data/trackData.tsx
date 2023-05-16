@@ -3,6 +3,15 @@ export type TrackData = {
   id: string;
 };
 
+export type AlbumData = {
+  title: string;
+  id: string;
+};
+
+export const albums2023: AlbumData[] = [
+  { title: "Early Mid Thirties", id: "1202973041" },
+];
+
 export const tracks2020: TrackData[] = [
   { title: "The New Rock and Roll", id: "1848517437" },
   { title: "Likey Likey", id: "2587741727" },

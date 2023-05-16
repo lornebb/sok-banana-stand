@@ -1,6 +1,6 @@
 import Track from "./Track";
 
-function iFrame({ size, trackId }: Track) {
+function iFrameTrack({ size, trackId }: Track) {
   const BASE_URL =
     "https://bandcamp.com/EmbeddedPlayer/size=large/bgcol=333333/linkcol=e99708/minimal=true/transparent=true/";
 
@@ -13,4 +13,4 @@ function iFrame({ size, trackId }: Track) {
   );
 }
 
-export default iFrame;
+export default iFrameTrack;
