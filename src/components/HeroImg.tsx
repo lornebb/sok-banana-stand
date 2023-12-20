@@ -1,6 +1,21 @@
 import { StickyHeader } from "../hooks/setScrolled";
 import { FaAngleDown } from "react-icons/fa";
 
+const ScrollArrowButton: React.FC = () => {
+  const handleScrollDown = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <button className='scroll-arrow-button' onClick={handleScrollDown}>
+      <FaAngleDown fontSize='150px' color='black' opacity={0.5} />
+    </button>
+  );
+};
+
 export const HeroImg = () => {
   const { scrolled } = StickyHeader();
 
@@ -18,7 +33,6 @@ export const HeroImg = () => {
         <img
           className='w-full'
           src='https://ik.imagekit.io/y6pjjzivw/SoK-Banana-Stand/SOK_Banana_Logo_v8-06.png'
-
           alt='son of kong logo'
         />
       </div>
@@ -27,9 +41,7 @@ export const HeroImg = () => {
           scrolled ? "transition ease-out duration-400 invisible" : ""
         }`}
       >
-        <div className='place-self-center'>
-          <FaAngleDown fontSize={"150px"} color={"black"} opacity={0.5} />
-        </div>
+        <ScrollArrowButton />
       </div>
     </div>
   );
