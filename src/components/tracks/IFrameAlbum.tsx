@@ -11,9 +11,9 @@ function iFrameAlbum({ size, albumId }: Album) {
 
   if (service === "spotify" && spotify) {
     return (
-      <Frame size={size} background='#121212'>
+      <Frame size={size} height={352} background='#121212'>
         <iframe
-          style={style}
+          style={{ ...style, height: "352px" }}
           allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
           loading='lazy'
           src={`https://open.spotify.com/embed/album/${spotify}?theme=0`}

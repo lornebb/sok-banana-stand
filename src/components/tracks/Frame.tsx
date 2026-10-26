@@ -4,16 +4,18 @@ import { ReactNode } from "react";
 // so Spotify / Apple Music sit in the same 300x300 slot as Bandcamp.
 const Frame = ({
   size,
+  height = size,
   background,
   children,
 }: {
   size: number;
+  height?: number;
   background: string;
   children: ReactNode;
 }) => (
   <div
     className='flex items-center justify-center overflow-hidden'
-    style={{ width: `${size}px`, height: `${size}px`, background }}
+    style={{ width: `${size}px`, height: `${height}px`, background }}
   >
     {children}
   </div>

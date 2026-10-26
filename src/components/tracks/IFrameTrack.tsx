@@ -3,7 +3,7 @@ import { useStreaming } from "../../hooks/streamingService";
 import Frame from "./Frame";
 import Track from "./Track";
 
-const SPOTIFY_HEIGHT = 232;
+const SPOTIFY_HEIGHT = 352;
 const APPLE_TRACK_HEIGHT = 175;
 
 function iFrameTrack({ size, trackId }: Track) {
