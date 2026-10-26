@@ -26,8 +26,8 @@ export const HeroImg = () => {
       <div
         className={`fixed max-w-xl px-4 ${
           scrolled
-            ? "transition ease-in-out duration-300 scale-50 -top-16 mt-3 sm:mt-0"
-            : "scale-100 transition"
+            ? "transition ease-in-out duration-300 scale-50 -top-16 mt-3 sm:mt-0 opacity-40"
+            : "scale-100 transition opacity-100"
         }`}
       >
         <img
