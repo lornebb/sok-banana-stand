@@ -1,11 +1,14 @@
-import { TrackData } from '../../data/trackData'
+import { EmbedData, TrackData } from '../../data/trackData'
+import Embed from './Embed'
 import Track from './Track'
 
 export const Tracks = ({
-  tracks,
+  tracks = [],
   year,
+  embeds = [],
 }: {
-  tracks: TrackData[]
+  tracks?: TrackData[]
+  embeds?: EmbedData[]
   year: number
 }) => {
   // 170 to 700 range for the size
@@ -20,6 +23,9 @@ export const Tracks = ({
 
           {tracks.map((track) => (
             <Track size={300} trackId={track.id} key={track.id} />
+          ))}
+          {embeds.map((embed) => (
+            <Embed size={300} embed={embed} key={embed.title} />
           ))}
         </div>
       </div>

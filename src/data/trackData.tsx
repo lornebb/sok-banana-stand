@@ -8,6 +8,22 @@ export type AlbumData = {
   id: string;
 };
 
+export type EmbedData =
+  | { kind: "soundcloud"; title: string; url: string }
+  | { kind: "youtube"; title: string; videoId: string };
+
+export const embeds2026: EmbedData[] = [
+  { kind: "youtube", title: "Son of Kong video", videoId: "PcnZuuUrqjk" },
+];
+
+export const embeds2024: EmbedData[] = [
+  {
+    kind: "soundcloud",
+    title: "Live at Fieldview Festival 2024",
+    url: "https://soundcloud.com/sonofkongcrew/live-at-fieldview-festival-2024",
+  },
+];
+
 export const albums2023: AlbumData[] = [
   { title: "Early Mid Thirties", id: "1202973041" },
 ];
