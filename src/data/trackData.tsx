@@ -12,6 +12,10 @@ export const albums2023: AlbumData[] = [
   { title: "Early Mid Thirties", id: "1202973041" },
 ];
 
+export const tracks2026: TrackData[] = [
+  { title: "Let That Monkey Go (Le Ballade De Freddie Scaramouche)", id: "2171418411" },
+];
+
 export const tracks2020: TrackData[] = [
   { title: "The New Rock and Roll", id: "1848517437" },
   { title: "Likey Likey", id: "2587741727" },

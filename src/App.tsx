@@ -11,6 +11,7 @@ import {
   tracks2018,
   tracks2019,
   tracks2020,
+  tracks2026,
   albums2023,
 } from "./data/trackData";
 
@@ -27,6 +28,7 @@ export const App = () => {
 
         {progress === 100 && (
           <div className='flex flex-col space-y-10'>
+            <Tracks year={2026} tracks={tracks2026} />
             <Albums year={2023} tracks={albums2023} />
             <Tracks year={2020} tracks={tracks2020} />
             <Tracks year={2019} tracks={tracks2019} />
@@ -36,7 +38,7 @@ export const App = () => {
             <Footer />
           </div>
         )}
-        <FloatingBananas count={100} />
+        <FloatingBananas count={300} />
       </div>
     </>
   );
