@@ -1,10 +1,8 @@
 import { streaming } from "../../data/streamingData";
 import { useStreaming } from "../../hooks/streamingService";
-import Frame from "./Frame";
+import StreamCard from "./StreamCard";
 import Track from "./Track";
 
-const SPOTIFY_HEIGHT = 352;
-const APPLE_TRACK_HEIGHT = 175;
 
 function iFrameTrack({ size, trackId }: Track) {
   const { service } = useStreaming();
@@ -13,28 +11,24 @@ function iFrameTrack({ size, trackId }: Track) {
 
   if (service === "spotify" && ids?.spotify) {
     return (
-      <Frame size={size} background="#121212">
-        <iframe
-          style={{ ...style, height: `${SPOTIFY_HEIGHT}px` }}
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-          src={`https://open.spotify.com/embed/track/${ids.spotify}?theme=0`}
-        ></iframe>
-      </Frame>
+      <StreamCard
+        size={size}
+        service='spotify'
+        ids={ids}
+        href={`https://open.spotify.com/track/${ids.spotify}`}
+      />
     );
   }
 
   if (service === "apple" && ids?.apple?.track) {
     const { album, track } = ids.apple;
     return (
-      <Frame size={size} background="#f2f2f2">
-        <iframe
-          style={{ ...style, height: `${APPLE_TRACK_HEIGHT}px` }}
-          allow="autoplay *; encrypted-media *; fullscreen *"
-          loading="lazy"
-          src={`https://embed.music.apple.com/us/album/_/${album}?i=${track}`}
-        ></iframe>
-      </Frame>
+      <StreamCard
+        size={size}
+        service='apple'
+        ids={ids}
+        href={`https://music.apple.com/us/album/_/${album}?i=${track}`}
+      />
     );
   }
 
