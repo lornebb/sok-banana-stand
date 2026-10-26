@@ -6,7 +6,21 @@ import Frame from "./Frame";
 function iFrameAlbum({ size, albumId }: Album) {
   const { service } = useStreaming();
   const apple = streaming[albumId]?.apple;
+  const spotify = streaming[albumId]?.spotify;
   const style = { border: "0", width: `${size}px`, height: `${size}px` };
+
+  if (service === "spotify" && spotify) {
+    return (
+      <Frame size={size} background='#121212'>
+        <iframe
+          style={style}
+          allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+          loading='lazy'
+          src={`https://open.spotify.com/embed/album/${spotify}?theme=0`}
+        ></iframe>
+      </Frame>
+    );
+  }
 
   if (service === "apple" && apple) {
     return (

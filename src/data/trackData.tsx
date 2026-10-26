@@ -59,6 +59,4 @@ export const tracks2016: TrackData[] = [
 
 export const tracks2015: TrackData[] = [
   { title: "Club Tropigwana", id: "743691718" },
-  { title: "Remember Me", id: "3008176448" },
-  { title: "Get Up", id: "4132457639" },
 ];
