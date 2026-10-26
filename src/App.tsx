@@ -4,6 +4,8 @@ import { Footer } from "./components/Footer";
 import { HeroImg } from "./components/HeroImg";
 import { Albums } from "./components/tracks/Albums";
 import { Tracks } from "./components/tracks/Tracks";
+import { ServiceToggle } from "./components/ServiceToggle";
+import { StreamingProvider } from "./hooks/streamingService";
 import { Wipe } from "./components/Wipe";
 import {
   tracks2015,
@@ -11,6 +13,9 @@ import {
   tracks2018,
   tracks2019,
   tracks2020,
+  tracks2026,
+  embeds2026,
+  embeds2024,
   albums2023,
 } from "./data/trackData";
 
@@ -18,7 +23,7 @@ export const App = () => {
   const { progress } = useProgress();
 
   return (
-    <>
+    <StreamingProvider>
       <div className='flex flex-col bg-transparent min-h-screen relative'>
         <HeroImg />
         <Wipe />
@@ -27,6 +32,9 @@ export const App = () => {
 
         {progress === 100 && (
           <div className='flex flex-col space-y-10'>
+            <ServiceToggle />
+            <Tracks year={2026} tracks={tracks2026} embeds={embeds2026} />
+            <Tracks year={2024} embeds={embeds2024} />
             <Albums year={2023} tracks={albums2023} />
             <Tracks year={2020} tracks={tracks2020} />
             <Tracks year={2019} tracks={tracks2019} />
@@ -36,8 +44,8 @@ export const App = () => {
             <Footer />
           </div>
         )}
-        <FloatingBananas count={100} />
+        <FloatingBananas count={300} />
       </div>
-    </>
+    </StreamingProvider>
   );
 };
