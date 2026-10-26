@@ -51,6 +51,7 @@ export function Banana({ z }: IBanana) {
       geometry={nodes.banana_high.geometry}
       material={materials.skin}
       material-emissive="orange"
+      scale={0.3}
     />
   )
 }
@@ -64,7 +65,7 @@ export function FloatingBananas({ count, depth = 80 }: IFloatingBananas) {
         <Suspense fallback={null}>
 
           {Array.from({ length: count }, (_, i) => (
-            <Banana key={i} z={-(i / count) * depth - 20} />
+            <Banana key={i} z={-(i / count) * depth - 30} />
           ))}
           <EffectComposer>
             <DepthOfField
