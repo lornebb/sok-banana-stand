@@ -26,7 +26,7 @@ export const ServiceToggle = () => {
     <div
       role='group'
       aria-label='Music service'
-      className={`fixed top-3 left-1/2 z-50 flex -translate-x-1/2 gap-1 rounded-full bg-neutral-800/90 p-1 shadow-lg backdrop-blur transition-all duration-300 ${
+      className={`fixed top-3 right-3 z-50 flex gap-1 rounded-full bg-neutral-800/90 p-1 shadow-lg backdrop-blur transition-all duration-300 ${
         visible
           ? 'translate-y-0 opacity-100'
           : 'pointer-events-none -translate-y-4 opacity-0'
@@ -37,6 +37,7 @@ export const ServiceToggle = () => {
           key={id}
           onClick={() => setService(id)}
           aria-pressed={service === id}
+          aria-label={label}
           className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold transition-colors ${
             service === id
               ? "bg-yellow-400 text-neutral-900"
@@ -44,7 +45,7 @@ export const ServiceToggle = () => {
           }`}
         >
           <Icon aria-hidden />
-          {label}
+          <span className='hidden lg:inline'>{label}</span>
         </button>
       ))}
     </div>
