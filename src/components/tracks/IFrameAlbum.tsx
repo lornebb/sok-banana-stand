@@ -1,6 +1,7 @@
 import { streaming } from "../../data/streamingData";
 import { useStreaming } from "../../hooks/streamingService";
 import Album from "./Album";
+import Frame from "./Frame";
 
 function iFrameAlbum({ size, albumId }: Album) {
   const { service } = useStreaming();
@@ -9,12 +10,14 @@ function iFrameAlbum({ size, albumId }: Album) {
 
   if (service === "apple" && apple) {
     return (
-      <iframe
-        style={style}
-        allow='autoplay *; encrypted-media *; fullscreen *'
-        loading='lazy'
-        src={`https://embed.music.apple.com/us/album/_/${apple.album}`}
-      ></iframe>
+      <Frame size={size} background='#f2f2f2'>
+        <iframe
+          style={style}
+          allow='autoplay *; encrypted-media *; fullscreen *'
+          loading='lazy'
+          src={`https://embed.music.apple.com/us/album/_/${apple.album}`}
+        ></iframe>
+      </Frame>
     );
   }
 
